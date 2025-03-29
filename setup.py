@@ -5,7 +5,7 @@ setup(
     version="0.1",               # La versión de tu librería
     packages=find_packages(),    # Encuentra todos los paquetes en el directorio pymenthon/
     install_requires=[           # Dependencias adicionales si las necesitas
-        # Puedes agregar aquí las dependencias necesarias como: 'requests', 'flask', etc.
+        # Agregar aquí las dependencias necesarias como: 'requests', 'flask', etc.
     ],
     entry_points={               # Mapeo de comandos CLI
         "console_scripts": [
