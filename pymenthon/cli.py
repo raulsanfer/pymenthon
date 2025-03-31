@@ -12,7 +12,7 @@ def main():
     # Comando para crear entorno
     create_parser = subparsers.add_parser('create', help='Crear un entorno virtual')
     create_parser.add_argument('env_name', type=str, help='Nombre del entorno')
-    create_parser.add_argument('--python', type=str, default='3.9', help='Versión de Python')
+    create_parser.add_argument('--python-version', type=str, default='3.9', help='Versión de Python')
     create_parser.set_defaults(func=create_env)
 
     # Comando para activar entorno
@@ -22,7 +22,7 @@ def main():
 
     # Comando para instalar dependencias
     install_parser = subparsers.add_parser('install', help='Instalar dependencias desde un archivo requirements.txt')
-    install_parser.add_argument('--requirements', type=str, required=True, help='Ruta al archivo requirements.txt')
+    install_parser.add_argument('--requirements-file',default='requirements.txt', type=str, required=True, help='Ruta al archivo requirements.txt')
     install_parser.set_defaults(func=install_dependencies)
 
     # Comando para desactivar entorno
@@ -34,7 +34,10 @@ def main():
     list_parser.set_defaults(func=list_envs)
 
     args = parser.parse_args()
-    args.func(**vars(args))
+    args_dict = vars(args)
+    func = args_dict.pop('func')   
+    func(**args_dict)
+    #args.func(**vars(args))
 
 if __name__ == '__main__':
     main()

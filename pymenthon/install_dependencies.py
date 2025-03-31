@@ -1,4 +1,5 @@
 import subprocess
+import sys
 
 def install_dependencies(requirements_path):
     print(f"Instalando dependencias desde {requirements_path}...")

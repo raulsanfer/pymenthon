@@ -1,6 +1,6 @@
 import os
 import sys
-
+import subprocess
 def activate_env(env_name):
     env_dir = os.path.join(os.getcwd(), env_name)
     
