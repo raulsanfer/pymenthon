@@ -4,13 +4,13 @@
 
 ## Instalación
 
-pip install git+https://github.com/raulsanfer/pymenthon.git
+pip install git+https://github.com/raulsanfer/pymenthon.git\
 
-pymenthon create my_project_env --python-version 3.9
-pymenthon activate my_project_env
-pymenthon install --requirements requirements.txt
-pymenthon deactivate
-pymenthon list
+pymenthon create my_project_env --python-version 3.9\
+pymenthon activate my_project_env\
+pymenthon install --requirements requirements.txt\
+pymenthon deactivate\
+pymenthon list\
 
 
 ## Consideraciones
